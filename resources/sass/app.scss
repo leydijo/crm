@@ -1,0 +1,28 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
+
+.createuser{
+    margin-left: 90px;
+}
+
+.usuario {
+    background-color: #ffc10e;
+    font-weight: 900;
+}
+
+.name{
+    font-size: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+    
+  }
