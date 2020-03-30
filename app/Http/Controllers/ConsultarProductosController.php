@@ -39,7 +39,7 @@ class ConsultarProductosController extends Controller
     public function store(Request $request)
     {
         //
-        return 'ajax';
+        return '$request';
     }
 
     /**

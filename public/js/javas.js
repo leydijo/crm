@@ -1,6 +1,7 @@
 
 
 $(document).ready(function() {
+    
     var form_data =  $('#button_action').val();
     $("#update_pedido" ).click(function() {
       
@@ -10,11 +11,18 @@ $(document).ready(function() {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
               },
             method:"POST",
-            data:form_data,
+            data:$('#envio form').serialize(),
             dataType:"json",
             success:function(data)
             {
                 console.log(data);
+            },
+            error: function (jqXHR,estado,error){
+                console.log(estado)
+                console.log(error)
+            },
+            complete: function (jqXHR,estado){
+                console.log(estado);
             }
         
         })

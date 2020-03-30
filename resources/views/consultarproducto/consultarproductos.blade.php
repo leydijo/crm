@@ -15,7 +15,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                        <div class="container ">
+                        <div class="container " id="envio">
                             
                                 <table class="table table-bordered  table-hover" id="consultarProducto">
                                     <thead class="thead-dark">
@@ -39,7 +39,7 @@
                                             <td>{{$order->brand->name}}</td>
                                             <td>{{$getUserById->phone}}</td>
                                             <td>{{$order->product['name']}}</td>
-                                            <form class="form-horizontal" action="" method="post" id="actualizar_producto">
+                                            <form class="form-horizontal" action="/consultar" method="post" id="actualizar_producto">
                                                 {{ csrf_field() }}
                                             <td>    <select class="custom-select" id="estado_pedido" >
                                                         @foreach($estadopedido as $estado)
@@ -50,6 +50,7 @@
                                             </td>
                                                  {{-- <input type="hidden" name="button_action" id="button_action" value="insert" /> --}}
                                                 <td><input type="submit"  name="submit"  id="update_pedido" value="Actualizar" class="btn btn-info" /></td>
+                                                <div id="status"></div>
                                                 
                                             </form>
                                         </tr>
