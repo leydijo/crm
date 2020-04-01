@@ -42,14 +42,15 @@
                                             <td>{{$order->brand->name}}</td>
                                             <td>{{$getUserById->phone}}</td>
                                             <td>{{$order->product['name']}}</td>
-                                            <td>    <select    name="ped" class="custom-select" id="estado_pedido{{$key}}" value="{{$order->id}}"  onchange="ajax_estado(this.value)" >
+                                            
+                                            <td>    <select    name="ped" class="custom-select"    onchange="ajax_estado(this.value, {{$order->id}})" >
                                                         @foreach($estadopedido as $estado)
-                                                            <option value="{{$estado->id}}" name="pedidos" selected="selected">{{$estado->name}}</option> 
+                                                            <option value="{{$estado->name}}" name="pedidos" selected="selected">{{$estado->name}}</option> 
                                                         @endforeach      
                                                     </select>
                                             </td>
-                                                  <input type="hidden"  id="id_order{{$key}}" value="{{$order->id}}" /> 
-                                                {{-- <td><button type="submit" id="update_pedido" class="btn btn-info">Actualizar</button></td> --}}
+                                                  
+                                            
                                                 
                                                 
                                            

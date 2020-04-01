@@ -29,6 +29,7 @@ class ConsultarProductosController extends Controller
     public function create()
     {
         //
+     
     }
 
     /**
@@ -40,12 +41,21 @@ class ConsultarProductosController extends Controller
     public function store(Request $request)
     {
         //
-         $contact = new Order;
+      
+        $id_order = $request->get('id_order');
 
-         $contact->pedidos = $request->pedidos;
-         $contact->save();
-        
-         return response()->json(['success'=>'Form is successfully submitted!']);
+        $pedido = $request->get('estado_pedido');
+
+        $Order = Order::find($id_order);
+
+        $Order->name =  $pedido;
+
+        $Order->save();
+
+        dd($Order);
+
+     
+
     }
 
     /**
@@ -81,6 +91,9 @@ class ConsultarProductosController extends Controller
     public function update(Request $request, $id)
     {
         //
+
+      
+        
     }
 
     /**

@@ -1,17 +1,17 @@
 
     
 
-    function ajax_estado(id){
-
-        estadoObj = new Object(id);
-        estadoObj.ordeId = $('#id_order'+id).val();
-        estadoObj.estado = $('#estado_pedido'+id).val();   
+    function ajax_estado(estado, order){
     
+        console.log(estado, order)
          $.ajax({
             url:"/consultar/store",
             method:"POST",
-            data:$.param(estadoObj),
+            data:{'id_order': order, 'estado_pedido': estado },
             dataType:"json",
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+              },
             success:function(data)
             {
                 console.log(data);

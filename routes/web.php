@@ -30,7 +30,8 @@ Route::resource('producto', 'AddProductoController');
 
 Route::get('/search', 'SearchController@search' );
 
-Route::resource('consultar', 'ConsultarProductosController' );
+//Route::resource('consultar', 'ConsultarProductosController' );
 
+Route::post('consultar/store', 'ConsultarProductosController@store');
 
 //Route::get('/home', 'HomeController@index')->name('home');
