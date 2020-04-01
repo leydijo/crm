@@ -1,17 +1,16 @@
 
-
-$(document).ready(function() {
     
-    var form_data =  $('#button_action').val();
-    $("#update_pedido" ).click(function() {
-      
-        $.ajax({
+
+    function ajax_estado(id){
+
+        estadoObj = new Object(id);
+        estadoObj.ordeId = $('#id_order'+id).val();
+        estadoObj.estado = $('#estado_pedido'+id).val();   
+    
+         $.ajax({
             url:"/consultar/store",
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-              },
             method:"POST",
-            data:$('#envio form').serialize(),
+            data:$.param(estadoObj),
             dataType:"json",
             success:function(data)
             {
@@ -26,6 +25,11 @@ $(document).ready(function() {
             }
         
         })
-    })
+    }
+    
+   
 
-});
+   //EN EL html <select onchange="ajax_estado({{id}})" ></select>
+ 
+
+

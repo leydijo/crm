@@ -30,34 +30,35 @@
                                             
                                         </tr>
                                     </thead>
+                                    <form id="actualizar_producto" name="actualizar_producto">
+                                        {{ csrf_field() }}
                                     <tbody>
                                         @foreach($getUserById->orders as $key => $order)
             
                                         <tr>
+                                        {{-- <td  value="{{$order->id}}" id="id_order{{$key}}">{{$order->id}}</td> --}}
                                             <td>{{$getUserById->fullname}}</td>
                                             <td>{{($order->payment)}}</td>
                                             <td>{{$order->brand->name}}</td>
                                             <td>{{$getUserById->phone}}</td>
                                             <td>{{$order->product['name']}}</td>
-                                            <form class="form-horizontal" action="/consultar" method="post" id="actualizar_producto">
-                                                {{ csrf_field() }}
-                                            <td>    <select class="custom-select" id="estado_pedido" >
+                                            <td>    <select    name="ped" class="custom-select" id="estado_pedido{{$key}}" value="{{$order->id}}"  onchange="ajax_estado(this.value)" >
                                                         @foreach($estadopedido as $estado)
-                                                         
-                                                            <option value="{{$estado->id}}" selected="selected">{{$estado->name}}</option> 
+                                                            <option value="{{$estado->id}}" name="pedidos" selected="selected">{{$estado->name}}</option> 
                                                         @endforeach      
                                                     </select>
                                             </td>
-                                                 {{-- <input type="hidden" name="button_action" id="button_action" value="insert" /> --}}
-                                                <td><input type="submit"  name="submit"  id="update_pedido" value="Actualizar" class="btn btn-info" /></td>
-                                                <div id="status"></div>
+                                                  <input type="hidden"  id="id_order{{$key}}" value="{{$order->id}}" /> 
+                                                {{-- <td><button type="submit" id="update_pedido" class="btn btn-info">Actualizar</button></td> --}}
                                                 
-                                            </form>
+                                                
+                                           
                                         </tr>
 
                                         @endforeach  
                                     </tbody>
-                        
+                                  </form>
+                                  
                                 </table>
                             
                       

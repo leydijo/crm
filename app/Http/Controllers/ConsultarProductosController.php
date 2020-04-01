@@ -17,6 +17,7 @@ class ConsultarProductosController extends Controller
     {
         //
         
+    
      
     }
 
@@ -39,7 +40,12 @@ class ConsultarProductosController extends Controller
     public function store(Request $request)
     {
         //
-        return '$request';
+         $contact = new Order;
+
+         $contact->pedidos = $request->pedidos;
+         $contact->save();
+        
+         return response()->json(['success'=>'Form is successfully submitted!']);
     }
 
     /**

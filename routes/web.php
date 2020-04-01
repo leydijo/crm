@@ -32,4 +32,5 @@ Route::get('/search', 'SearchController@search' );
 
 Route::resource('consultar', 'ConsultarProductosController' );
 
+
 //Route::get('/home', 'HomeController@index')->name('home');
