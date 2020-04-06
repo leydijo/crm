@@ -3,7 +3,7 @@
 
     function ajax_estado(estado, order){
     
-        console.log(estado, order)
+    
          $.ajax({
             url:"/consultar/store",
             method:"POST",

@@ -52,7 +52,7 @@ class ConsultarProductosController extends Controller
 
         $Order->save();
 
-        dd($Order);
+        
 
      
 

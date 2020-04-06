@@ -36,7 +36,7 @@
                                         @foreach($getUserById->orders as $key => $order)
             
                                         <tr>
-                                        {{-- <td  value="{{$order->id}}" id="id_order{{$key}}">{{$order->id}}</td> --}}
+                                        
                                             <td>{{$getUserById->fullname}}</td>
                                             <td>{{($order->payment)}}</td>
                                             <td>{{$order->brand->name}}</td>
@@ -50,7 +50,7 @@
                                                     </select>
                                             </td>
                                                   
-                                            
+                                            <a type="button" href="{{ route('producto.index') }}?user={{$user->id}} " class="btn btn-info">Consultar Pro </a> 
                                                 
                                                 
                                            
