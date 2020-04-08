@@ -1,0 +1,16 @@
+
+
+.welcome{
+    color: #ffc10e;
+}
+
+.informacion{
+    display: flex;
+    justify-content:space-between;
+   
+}
+
+.cliente{
+    margin: 40%;
+}
+

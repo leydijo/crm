@@ -16,7 +16,7 @@
                         </div>
                     @endif
                         <div class="container " id="envio">
-                            
+
                                 <table class="table table-bordered  table-hover" id="consultarProducto">
                                     <thead class="thead-dark">
                                         <tr>
@@ -27,47 +27,48 @@
                                             <th scope="col">Producto / Servicio</th>
                                             <th scope="col">Estado del pedido</th>
                                             <th scope="col">Acciones</th>
-                                            
+
                                         </tr>
                                     </thead>
                                     <form id="actualizar_producto" name="actualizar_producto">
                                         {{ csrf_field() }}
                                     <tbody>
                                         @foreach($getUserById->orders as $key => $order)
-            
+
                                         <tr>
-                                        
+
                                             <td>{{$getUserById->fullname}}</td>
                                             <td>{{($order->payment)}}</td>
                                             <td>{{$order->brand->name}}</td>
                                             <td>{{$getUserById->phone}}</td>
                                             <td>{{$order->product['name']}}</td>
-                                            
-                                            <td>    <select    name="ped" class="custom-select"    onchange="ajax_estado(this.value, {{$order->id}})" >
+
+                                            <td>    <select  name="ped" class="custom-select"    onchange="ajax_estado(this.value, {{$order->id}})" >
                                                         @foreach($estadopedido as $estado)
-                                                            <option value="{{$estado->name}}" name="pedidos" selected="selected">{{$estado->name}}</option> 
-                                                        @endforeach      
+                                                            <option value="{{$estado->name}}" name="pedidos" selected="selected">{{$estado->name}}</option>
+                                                        @endforeach
                                                     </select>
                                             </td>
-                                                  
-                                            <a type="button" href="{{ route('producto.index') }}?user={{$user->id}} " class="btn btn-info">Consultar Pro </a> 
-                                                
-                                                
-                                           
+
+                                        <td><button href="#" class="btn btn-info">Cerrar Venta </button>   <a href="{{ route('ventas.pdf')}}" class="btn btn-info">Enviar Correo </a> </td>
+
+
+
                                         </tr>
 
-                                        @endforeach  
+                                        @endforeach
                                     </tbody>
                                   </form>
-                                  
+                                
                                 </table>
-                            
-                      
+                                <a type="button" href="{{ route('usuario.index') }}"><i class="fas fa-home fa-2x text-secondary" ></i></a>
+                                <br>
+
                         </div>
-                  
+
                 </div>
             </div>
-           
+
         </div>
     </div>
 </div>

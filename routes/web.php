@@ -35,3 +35,5 @@ Route::get('/search', 'SearchController@search' );
 Route::post('consultar/store', 'ConsultarProductosController@store');
 
 //Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('ventas-pdf', 'VentasPdfController@exportPdf')->name('ventas.pdf');
