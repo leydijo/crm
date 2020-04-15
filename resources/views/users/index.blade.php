@@ -54,7 +54,7 @@
                                <td><a type="button" href="{{ route('usuario.edit', $user->id) }}"  class="btn btn-success">Editar</a> 
                                 <a type="button" href="{{ asset('producto/create') }}?user={{$user->id}}"  class="btn btn-warning">Crear Servicio </a>
                                 <a type="button" href="{{ route('producto.index') }}?user={{$user->id}} " class="btn btn-info">Consultar Pro </a> 
-                                {{-- <a type="button" href="{{ route('consultar.edit', $user->id) }} " class="btn btn-info">prueba </a>  --}}
+                               
                             </td>
                                
                                 

@@ -50,7 +50,7 @@
                                                     </select>
                                             </td>
 
-                                        <td><button href="#" class="btn btn-info">Cerrar Venta </button>   <a href="{{ route('ventas.pdf')}}" class="btn btn-info">Enviar Correo </a> </td>
+                                        <td><button href="#" class="btn btn-info">Cerrar Venta </button>   <a href="{{ route('ventas.pdf')}}?order={{$order->id}}" class="btn btn-info">Enviar Correo </a> </td>
 
 
 

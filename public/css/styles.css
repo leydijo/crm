@@ -1,16 +1,71 @@
+.main{
+    margin: 20px 30px;
+    border: 1px solid #ffc10e;
+}
+.encabezado{
+    background: #f4f4f4;
+    margin: 20px 30px;
+}
 
+.line{
+    display: flex;
+    background-color: #ffc10e;
+    height: 20px;
+}
 
-.welcome{
-    color: #ffc10e;
+.margen{
+    margin: 20px 40px;
+}
+
+.logo{
+    border-radius: 50%;
+    width: 80px;
+    height: 78px;
+    margin-top: 20px;
 }
 
 .informacion{
+    display: flex; 
+}
+
+.infoEmpresa{
+    margin-left: 20px;
+}
+
+.namEmpresa{
+    font-size: 20px;
+}
+
+.infofactura{
+    margin-left: 890px;
+} 
+
+.fecha{
+    text-align: center;
+}
+
+.numeroFactura{
+    margin-top: 20px;
+}
+
+.linea{
+  border-top: 1px solid #ffc10e;
+  height: 2px;
+  padding: 0;
+  /*margin: 20px auto 0 auto;*/
+}
+
+/*Tabla*/
+
+.infoEmpresaCliente{
     display: flex;
-    justify-content:space-between;
-   
+}
+
+.condiciones{
+    display: flex;
+    justify-content: flex-end;
 }
 
 .cliente{
-    margin: 40%;
+    margin-left: 500px;
 }
-

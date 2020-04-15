@@ -68,7 +68,7 @@ class Order extends Model
 		'deliver_date'
 	];
 
-	public $timestamps = false;
+	//public $timestamps = false;
  
 	public function brand()
 	{
