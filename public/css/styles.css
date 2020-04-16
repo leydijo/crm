@@ -1,6 +1,6 @@
 .main{
     margin: 20px 30px;
-    border: 1px solid #ffc10e;
+    /*border: 1px solid #ffc10e;*/
 }
 .encabezado{
     background: #f4f4f4;
@@ -55,6 +55,12 @@
   /*margin: 20px auto 0 auto;*/
 }
 
+.lineaCliente{
+    border-top: 1px solid #ffc10e;
+    height: 2px;
+    padding: 0;
+    width: 192%;
+}
 /*Tabla*/
 
 .infoEmpresaCliente{
@@ -68,4 +74,15 @@
 
 .cliente{
     margin-left: 500px;
+}
+.centrar{
+    text-align: center ;
+}
+
+.tabla{
+    background: #ffc10e;
+}
+
+.completar{
+    margin-top: 26px;
 }
