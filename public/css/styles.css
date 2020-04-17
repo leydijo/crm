@@ -86,3 +86,18 @@
 .completar{
     margin-top: 26px;
 }
+
+.subtotal {
+    width: 27%;
+    margin-left: 73%;
+    margin-top: -17px;
+}
+
+.totales{
+    border: 1px solid #000;
+    /*width: 30%;*/
+}
+
+td{
+    text-align: left;
+}

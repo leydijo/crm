@@ -21,7 +21,7 @@ class VentasPdfController extends Controller
         $user=new NewUser();
         $estadopedido = StateOrder::all();
         $orders = Order::all();
-       $getUserById=$user->getUserById($request->get("user", 'estadopedido', 'orders'));
+        $getUserById=$user->getUserById($request->get("user", 'estadopedido', 'orders'));
 
        //dd($user);
 

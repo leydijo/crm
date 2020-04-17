@@ -168,13 +168,13 @@
             
         </div>
         <section class="margen">
-            <table class="table table-bordered ">
+            <table class="table  ">
                 <thead class="tabla">
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">Descripción</th>
                     <th scope="col">Precio Unitario</th>
-                    <th scope="col">Precio/th>
+                    <th scope="col">Precio</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -190,14 +190,31 @@
                     <td>Thornton</td>
                     <td>@fat</td>
                   </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
+                  
+                  
+                  <tfoot>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td data-type="total"> SUBTOTAL</td>
+                        <td data-type="total">$ 10,000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td data-type="total">IVA</td>
+                        <td data-type="total">$ 10,000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td data-type="total">TOTAL</td>
+                        <td data-type="total">$ 10,000</td>
+                    </tr>
+                </tfoot>
                 </tbody>
+                
             </table>
-            <table class=" table-bordered ">
+            
+            
+            {{-- <table class="subtotal table-bordered ">
                 <tbody>
                     <tr>
                         <td scope="col">a-f</td>
@@ -209,20 +226,18 @@
                         <td>a-f</td>
                     </tr>
                 </tbody>
-            </table>
+            </table> --}}
             
         </section>
-        <div class="di">r</div>
-        <div class="di">r</div>
-        <div class="di">r</div>
-        <div class="di">r</div>
-        <div class="di">r</div>
+       
+
+        <footer>
+            <div class="line"></div>
+        </footer>
     </div>
     
     
-<footer>
 
-</footer>
-     <div class="line"></div>
+    
 </body>
 </html>
